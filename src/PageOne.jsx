@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
-const PageOne = ({ data, allPage, nowPage }) => {
+const PageOne = ({ data, totalPages }) => {
     return (
         <div className='w-[210mm] h-[297mm]' id='pdfContent'>
             <div className="flex flex-col">
-                <div className='text-end text-base'>共<span className='border-b-2 border-gray-700'> {allPage} </span>頁第<span className='border-b-2 border-gray-700'> {nowPage} </span>頁</div>
+                <div className='text-end text-base'>共<span className='border-b-2 border-gray-700'> {totalPages} </span>頁第<span className='border-b-2 border-gray-700'> 1 </span>頁</div>
                 {/* 最上方表格 */}
                 <div className="flex w-full">
                     {/* 左邊區塊 */}
@@ -30,17 +30,17 @@ const PageOne = ({ data, allPage, nowPage }) => {
                         {/* 右邊區塊的第一行 */}
                         <div className="flex items-center">
                             <p className="pr-2 whitespace-nowrap">&emsp; 公司預查編號</p>
-                            <div className="border-2 border-gray-800 h-[36px] w-[100%] items-center flex pl-2">{data.compPreNo}</div>
+                            <div className="border-2 border-gray-800 h-[36px] w-[100%] items-center flex pl-2 tracking-custom">{data.compPreNo}</div>
                         </div>
                         {/* 右邊區塊的第二行 */}
                         <div className="flex flex-row items-center">
                             <p className="pr-2 whitespace-nowrap">※ 公司統一編號</p>
-                            <div className="border-x-2 border-gray-800 h-[36px] w-[100%] items-center flex pl-2">{data.compUniNo}</div>
+                            <div className="border-x-2 border-gray-800 h-[36px] w-[100%] items-center flex pl-2 tracking-custom">{data.compUniNo}</div>
                         </div>
                         {/* 右邊區塊的第三行 */}
                         <div className="flex flex-row items-center">
                             <p className="pr-2 whitespace-nowrap">&emsp; 公司聯絡電話</p>
-                            <div className="border-2 border-gray-800 h-[36px] w-[100%] items-center flex pl-2">{data.compContactTel}</div>
+                            <div className="border-2 border-gray-800 h-[36px] w-[100%] items-center flex pl-2 tracking-custom">{data.compContactTel}</div>
                         </div>
                         {/* 右邊區塊的第四行 */}
                         <div className="flex flex-row items-center justify-between">
@@ -109,7 +109,7 @@ const PageOne = ({ data, allPage, nowPage }) => {
                             <div className="border-b border-gray-700" />
                             {/* 一﹑外文公司名稱 */}
                             <div className=" border-gray-700 py-2 h-[40px] flex items-center">
-                                <p className="items-center flex pl-2 text-base">{data.coNameIntl}</p>
+                                <p className="items-center flex pl-2 text-base tracking-custom">{data.coNameIntl}</p>
                             </div>
                         </div>
                     </div>
@@ -220,7 +220,7 @@ const PageOne = ({ data, allPage, nowPage }) => {
                         </div>
                         {/* 六﹑公司章程訂定日期_內容 */}
                         <div className="flex items-center w-[70%]">
-                            <p className="text-base mx-2 tracking-widest">
+                            <p className="text-base mx-2 tracking-custom">
                                 {data.charterDate}
                             </p>
                         </div>
@@ -243,7 +243,7 @@ const PageOne = ({ data, allPage, nowPage }) => {
                                     <div className="flex items-center border-r border-b border-gray-700 w-24">
                                         <p className="text-base mx-auto">資產增加</p>
                                     </div>
-                                    <div className="flex flex-col w-[82.5%]">
+                                    <div className="flex flex-col w-[83.5%]">
                                         <div className="border-b border-gray-700 flex items-center justify-between py-1">
                                             <p className="text-base pl-2">1. 現金</p>
                                             <p className="text-base pr-2 ">
@@ -329,7 +329,7 @@ const PageOne = ({ data, allPage, nowPage }) => {
                             </div>
                             <div className="w-full h-full">
                                 {/* 八、被合併公司資料明細-1 */}
-                                 <div className="flex flex-row border-b border-gray-700">
+                                <div className="flex flex-row border-b border-gray-700">
                                     <div className="border-r border-gray-700 w-40 text-center">
                                         <p className="text-base my-1">合併基準日</p>
                                     </div>
@@ -343,12 +343,10 @@ const PageOne = ({ data, allPage, nowPage }) => {
                                 {/* 八、被合併公司資料明細-2 */}
                                 <div className=" flex flex-row border-b border-gray-700">
                                     <div className="border-r border-gray-700 w-40 text-center">
-                                        <p className="text-base mx-2 py-1">
-                                            {data.mergeCo[0].mergeDate}
-                                        </p>
+                                        <p className="py-2 mx-auto text-base tracking-custom">{data.mergeCo[0].mergeDate}</p>
                                     </div>
                                     <div className="border-r border-gray-700 w-24 text-center">
-                                        <p className="py-2 mx-auto text-base">{data.mergeCo[0].compUniNo}</p>
+                                        <p className="py-2 mx-auto text-base tracking-custom">{data.mergeCo[0].compUniNo}</p>
                                     </div>
                                     <div>
                                         <p className="py-2 text-base pl-1">{data.mergeCo[0].comName}</p>
@@ -357,12 +355,12 @@ const PageOne = ({ data, allPage, nowPage }) => {
                                 {/* 八、被合併公司資料明細-3 */}
                                 <div className=" flex flex-row border-b border-gray-700">
                                     <div className="border-r border-gray-700 w-40  text-center">
-                                        <p className="text-base mx-2 py-1">
+                                        <p className="text-base mx-2 py-1 tracking-custom">
                                             {data.mergeCo[1].mergeDate}
                                         </p>
                                     </div>
                                     <div className="border-r border-gray-700 w-24 text-center">
-                                        <p className="py-2 mx-auto text-base">{data.mergeCo[0].compUniNo}</p>
+                                        <p className="py-2 mx-auto text-base tracking-custom">{data.mergeCo[0].compUniNo}</p>
                                     </div>
                                     <div>
                                         <p className="py-2 text-base pl-1">{data.mergeCo[0].comName}</p>
@@ -371,12 +369,12 @@ const PageOne = ({ data, allPage, nowPage }) => {
                                 {/* 八、被合併公司資料明細-4 */}
                                 <div className="flex flex-row">
                                     <div className="border-r border-gray-700 w-40 text-center">
-                                        <p className="text-base mx-2 py-1">
+                                        <p className="text-base mx-2 py-1 tracking-custom">
                                             {data.mergeCo[2].mergeDate}
                                         </p>
                                     </div>
                                     <div className="border-r border-gray-700 w-24 text-center">
-                                        <p className="py-2 mx-auto text-base">{data.mergeCo[0].compUniNo}</p>
+                                        <p className="py-2 mx-auto text-base tracking-custom">{data.mergeCo[0].compUniNo}</p>
                                     </div>
                                     <div>
                                         <p className="py-2 text-base pl-1">{data.mergeCo[0].comName}</p>
@@ -394,14 +392,14 @@ const PageOne = ({ data, allPage, nowPage }) => {
                             <p className="whitespace-nowrap text-xs">核准登記</p>
                             <p className="whitespace-nowrap text-xs">日期文號</p>
                         </div>
-                        <div className="border-2 border-gray-800 h-[40px] w-[100%] items-center flex pl-2">{data.approvedDateRef}</div>
+                        <div className="border-2 border-gray-800 h-[40px] w-[100%] items-center flex pl-2 tracking-custom">{data.approvedDateRef}</div>
                     </div>
                     <div className="flex items-center w-1/3 pl-2">
                         <div className="text-lg font-bold">※</div>
                         <div className="pr-2">
                             <p className="whitespace-nowrap text-xs">檔號</p>
                         </div>
-                        <div className="border-2 border-gray-800 h-[40px] w-[100%] items-center flex pl-2">{data.fileNo}</div>
+                        <div className="border-2 border-gray-800 h-[40px] w-[100%] items-center flex pl-2 tracking-custom">{data.fileNo}</div>
                     </div>
                 </div>
                 {/* 公務記載蓋章欄 */}
@@ -427,7 +425,7 @@ const PageOne = ({ data, allPage, nowPage }) => {
                         (五)為配合郵政作業，請於所在地加填郵遞區號。
                     </p>
                 </div>
-                <div className="text-sm self-end mr-2 mb-2 flex flex-col"><p>商2301 - 1網</p><p>1071108 公告</p></div>
+                <div className="text-sm self-end mr-2 mb-2 flex flex-col"><p className='tracking-custom'>商2301 - 1網</p><p className='tracking-custom'>1071108 公告</p></div>
             </div>
         </div>
     );
@@ -435,8 +433,7 @@ const PageOne = ({ data, allPage, nowPage }) => {
 
 PageOne.propTypes = {
     data: PropTypes.object.isRequired,
-    allPage: PropTypes.object.isRequired,
-    nowPage: PropTypes.object.isRequired,
+    totalPages: PropTypes.number.isRequired
 }
 
 export default PageOne;

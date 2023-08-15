@@ -77,6 +77,86 @@
     {
         "code": "ZZ99999",
         "itemDescription": "除許可業務外，得經營法令非禁止或限制之業務"
+    },
+    {
+        "code": "F401010",
+        "itemDescription": "國際貿易業"
+    },
+    {
+        "code": "I103060",
+        "itemDescription": "管理顧問業"
+    },
+    {
+        "code": "I301010",
+        "itemDescription": "資訊軟體服務業"
+    },
+    {
+        "code": "I301020",
+        "itemDescription": "資料處理服務業"
+    },
+    {
+        "code": "I301030",
+        "itemDescription": "電子資訊供應服務業"
+    },
+    {
+        "code": "I301040",
+        "itemDescription": "第三方支付服務業"
+    },
+    {
+        "code": "I401010",
+        "itemDescription": "一般廣告服務業"
+    },
+    {
+        "code": "IZ13010",
+        "itemDescription": "網路認證服務業"
+    },
+    {
+        "code": "IZ15010",
+        "itemDescription": "市場研究及民意調查業"
+    },
+    {
+        "code": "ZZ99999",
+        "itemDescription": "除許可業務外，得經營法令非禁止或限制之業務"
+    },
+    {
+        "code": "F401010",
+        "itemDescription": "國際貿易業"
+    },
+    {
+        "code": "I103060",
+        "itemDescription": "管理顧問業"
+    },
+    {
+        "code": "I301010",
+        "itemDescription": "資訊軟體服務業"
+    },
+    {
+        "code": "I301020",
+        "itemDescription": "資料處理服務業"
+    },
+    {
+        "code": "I301030",
+        "itemDescription": "電子資訊供應服務業"
+    },
+    {
+        "code": "I301040",
+        "itemDescription": "第三方支付服務業"
+    },
+    {
+        "code": "I401010",
+        "itemDescription": "一般廣告服務業"
+    },
+    {
+        "code": "IZ13010",
+        "itemDescription": "網路認證服務業"
+    },
+    {
+        "code": "IZ15010",
+        "itemDescription": "市場研究及民意調查業"
+    },
+    {
+        "code": "ZZ99999",
+        "itemDescription": "除許可業務外，得經營法令非禁止或限制之業務"
     }
 ]
 }
