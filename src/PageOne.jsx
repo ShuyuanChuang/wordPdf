@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const PageOne = ({ data, totalPages }) => {
     return (
-        <div className='w-[210mm] h-[297mm] border border-gray-700' id='pdfContent'>
+        <div className='w-[210mm] h-[297mm]' id='pdfContent'>
             <div className="flex flex-col p-12">
                 <div className='text-base text-end'>共<span className='border-b-2 border-gray-700'> {totalPages} </span>頁第<span className='border-b-2 border-gray-700'> 1 </span>頁</div>
                 {/* 最上方表格 */}
